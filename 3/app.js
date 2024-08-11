@@ -134,7 +134,7 @@
 // function fizzBuzz(num) {
 
 //   for (let i = 1; i <= num; i++) {
-    
+
 //     if (i % 3 === 0 && i % 5 === 0) {
 //       console.log("FizzBuzz");
 //     }
@@ -152,5 +152,57 @@
 
 // fizzBuzz(15);
 
+const amountInput = document.querySelectorAll("input")[0];
+const preferredNoteInput = document.querySelectorAll("input")[1];
 
-console.log(4.0 + 4.0 + ".0")
+function atmMachine() {
+  const amount = Number(document.querySelectorAll("input")[0].value);
+  const preferredNote = Number(document.querySelectorAll("input")[1].value);
+  const preferredNoteArr = [500, 100, 50, 20, 10, 5, 1];
+  let preferredNoteValue = 0;
+  let remainValue = 0;
+  let otherNote = 0;
+  let otherNoteRemainVal = 0;
+
+  if (amount <= 100 || amount >= 100000) {
+    alert("Amount should between 100 and 100000");
+    return;
+  } else {
+    for (let i = 0; i < preferredNoteArr.length; i++) {
+      if (preferredNote === preferredNoteArr[i]) {
+        preferredNoteValue = preferredNoteArr[i];
+        preferredNoteArr.splice(i, 1);
+        break;
+      } else {
+        preferredNoteValue = 0;
+      }
+    }
+    if (preferredNoteValue > 0) {
+      let noteValue = Math.floor(amount / preferredNoteValue);
+      if (noteValue <= 200) {
+        remainValue = Math.floor(amount % preferredNoteValue);
+        console.log(
+          `Your prefered currency note ${preferredNoteValue} : ${noteValue} `
+        );
+      } else {
+        remainValue = Math.floor(amount - preferredNoteValue * 200);
+        console.log(`Your prefered currency note ${preferredNoteValue} : 200`);
+      }
+
+      for (let i = 0; i < preferredNoteArr.length; i++) {
+        otherNote = Math.floor(remainValue / preferredNoteArr[i]);
+        if (otherNote <= 200) {
+          otherNoteRemainVal = remainValue % preferredNoteArr[i];
+          console.log(`Currency Note ${preferredNoteArr[i]} : ${otherNote}`);
+          remainValue = otherNoteRemainVal;
+        } else {
+          otherNoteRemainVal = remainValue - preferredNoteArr[i] * 200;
+          console.log(`Currency Note ${preferredNoteArr[i]} : 200`);
+          remainValue = otherNoteRemainVal;
+        }
+      }
+    } else {
+      alert("preferred note should be 500, 100, 50, 20, 10, 5 or 1");
+    }
+  }
+}
