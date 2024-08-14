@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="h-screen flex items-center justify-evenly flex-col bg-sky-100">
+      <div class="floors bg-sky-200 flex flex-col gap-y-2 p-12 rounded-lg shadow-xl font-semibold">
+        <div id="floor-1" class="bg-white p-4 w-100 rounded-lg shadow-xl">
+            Floor 01
+        </div>
+        <div id="floor-2" class="bg-white p-4 w-100 rounded-lg shadow-xl">
+            Floor 02
+        </div>
+        <div id="floor-3" class="bg-white p-4 w-100 rounded-lg shadow-xl">
+            Floor 03
+        </div>
+        <div id="floor-4" class="bg-white p-4 w-100 rounded-lg shadow-xl">
+            Floor 04
+        </div>
+        <div id="floor-5" class="bg-white p-4 w-full rounded-lg shadow-xl">
+            Floor 05
+        </div>
+      </div>
+
+      <div class="container flex justify-center gap-x-4 text-white font-semibold">
+        <button class="bg-sky-600 rounded-lg w-24 p-2 hover:opacity-85" onclick="lift('1')">Floor 01</button>
+        <button class="bg-sky-600 rounded-lg w-24 p-2 hover:opacity-85" onclick="lift('2')">Floor 02</button>
+        <button class="bg-sky-600 rounded-lg w-24 p-2 hover:opacity-85" onclick="lift('3')">Floor 03</button>
+        <button class="bg-sky-600 rounded-lg w-24 p-2 hover:opacity-85" onclick="lift('4')">Floor 04</button>
+        <button class="bg-sky-600 rounded-lg w-24 p-2 hover:opacity-85" onclick="lift('5')">Floor 05</button>
+      </div>
+    </div>
+
+    <div id="audio">
+          
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
