@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 6px;
+}
+
+body{
+    background-color: rgb(241, 250, 254);
+}
+
+.hide{
+    display: none;
+}
+.red{
+    color: red;
+}

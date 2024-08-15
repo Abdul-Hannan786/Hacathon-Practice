@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="add-container p-5">
+      <input
+        type="text"
+        placeholder="Enter Your Title"
+        class="w-50 border p-3 rounded-lg mb-2"
+      />
+      <br />
+      <textarea
+        placeholder="Enter your content"
+        class="border p-3 rounded-lg w-72 h-40"
+      ></textarea>
+      <br />
+      <button
+        class="border p-2 rounded-md bg-sky-600 text-white font-semibold"
+        onclick="createNotes()"
+      >
+        Add Note
+      </button>
+    </div>
+
+    <div class="edit-container p-5 hide">
+      <input
+        type="text"
+        placeholder="Enter Your Title"
+        class="w-50 border p-3 rounded-lg mb-2"
+      />
+      <br />
+      <textarea
+        placeholder="Enter your content"
+        class="border p-3 rounded-lg w-72 h-40"
+      ></textarea>
+      <br />
+      <button
+        class="border p-2 rounded-md bg-sky-600 text-white font-semibold"
+        onclick="updateNote()"
+      >
+        Save Note
+      </button>
+    </div>
+
+    <div id="note-container" class="grid grid-cols-3 gap-y-2 p-5"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

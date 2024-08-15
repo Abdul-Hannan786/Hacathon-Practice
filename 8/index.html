@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="add-container">
+      <textarea placeholder="Enter your description" class="border p-2 w-72 rounded-lg"></textarea>
+      <br />
+      <input type="number" placeholder="Enter your amount" class="border p-2 rounded-lg"/>
+      <br />
+      <button onclick="createExpense()" class="bg-sky-600 p-2 mt-2 rounded-lg text-white font-semibold">Add Expense</button>
+    </div>
+
+    <div class="edit-container hide">
+      <textarea placeholder="Enter your description" class="border p-2 w-72 rounded-lg"></textarea>
+      <br />
+      <input type="number" placeholder="Enter your amount" class="border p-2 rounded-lg"/>
+      <br />
+      <button onclick="updateExpense()" class="bg-sky-600 p-2 mt-2 rounded-lg text-white font-semibold">Save Expense</button>
+    </div>
+
+    <div class="log-container"></div>
+    <div class="flex">
+      <p class="shadow-xl p-3 bg-white rounded-lg font-semibold">Your Total Amount: <span class="total">0</span></p>
+    </div>
+    <div class="error"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
