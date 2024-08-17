@@ -36,26 +36,31 @@
 
 // container.innerHTML = str
 
-// console.log(typeof null);
-// console.log(typeof undefined);
-// console.log(typeof this);
-// console.log(typeof ["String"]);
-// console.log(typeof {});
-// console.log(typeof 23);
-// console.log(typeof (23 + "20"));
-// console.log(typeof typeof 2);
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(typeof this);
+console.log(typeof ["String"]);
+console.log(typeof {});
+console.log(typeof 23);
+console.log(typeof (23 + "20"));
+console.log(typeof typeof 2);
 
-// console.log(typeof new Date());
-// console.log(typeof class {});
-// console.log(typeof NaN);
-// console.log(typeof Symbol());
-// console.log(typeof BigInt(10515184506221));
-// console.log(typeof console.log);
-// console.log(typeof alert);
+console.log(typeof new Date());
+console.log(typeof class {});
+console.log(typeof NaN);
+console.log(typeof Symbol());
+console.log(typeof BigInt(10515184506221));
+console.log(typeof console.log);
+console.log(typeof alert);
 
-// console.log(isNaN(undefined))
-// typeof (new (class F extends (String, Array) { })).substring
+// let arr1 = [1, 2, 3]
+// let arr2 = [1, 2, 3]
 
-console.log(typeof (new (class F extends (String, Array) { })).substring
-
-)
+// for(let keys of arr1){
+//     console.log(keys)
+// }
+// let obj = {
+//     name: "Abdul Hannan",
+//     rollNumber: 188528,
+//     isMarried: true
+// }
